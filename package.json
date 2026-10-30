@@ -1,0 +1,57 @@
+{
+  "name": "@whatauth/sdk",
+  "version": "1.0.0",
+  "description": "Official TypeScript & JavaScript SDK for WhatAuth Passwordless QR Authentication",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "node --test",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "whatauth",
+    "whatsapp",
+    "authentication",
+    "passwordless",
+    "qr-auth",
+    "auth",
+    "2fa",
+    "security"
+  ],
+  "author": "WhatAuth <support@whatauth.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fenixninja/whatauth-js-sdk.git"
+  },
+  "homepage": "https://whatauth.com",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
